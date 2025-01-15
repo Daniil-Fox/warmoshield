@@ -1,0 +1,66 @@
+.partners {
+  margin-bottom: 20rem;
+  @include mobile {
+    margin-bottom: 10rem;
+  }
+  &__container {
+    position: relative;
+    background-color: #fff;
+    padding: 6rem 0;
+    @include mobile {
+      margin: 0 calc(-1 * var(--container-offset));
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: 10rem;
+      height: 10rem;
+      clip-path: polygon(0 0, 100% 100%, 100% 0);
+      background-color: #fff;
+      @include mobile {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      bottom: 0;
+      width: 10rem;
+      height: 10rem;
+      clip-path: polygon(0 100%, 0 0, 100% 100%);
+      background-color: #fff;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  &__slider {
+    padding: 0 6rem;
+    .swiper-wrapper {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+    .swiper-slide {
+      box-sizing: border-box;
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+      img {
+        height: 100%;
+        max-height: 12rem;
+        // max-width: 30rem;
+        width: auto;
+        object-fit: contain;
+        user-select: none;
+      }
+    }
+  }
+}

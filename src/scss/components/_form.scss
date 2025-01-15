@@ -1,0 +1,83 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem 2rem;
+  @include mobile {
+    display: block;
+  }
+  &__label {
+    display: block;
+    width: 100%;
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &:last-of-type {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__input {
+    height: 6.3rem;
+    width: 100%;
+    padding: 2rem;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 100%;
+    color: #000;
+    border: 2px solid #b3b3b3;
+    transition: 0.2s ease-in-out;
+    &::placeholder {
+      color: #b3b3b3;
+      transition: 0.2s ease-in-out;
+    }
+
+    @include hover {
+      color: #666;
+      border-color: #666;
+      &::placeholder {
+        color: #666;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      color: #000;
+      border-color: #000;
+      &::placeholder {
+        color: #000;
+      }
+    }
+  }
+
+  &__agree {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    display: block;
+    line-height: 150%;
+    color: #000;
+    @include mobile {
+      font-size: 1.4rem;
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__btn {
+    font-size: 2rem;
+    @include mobile {
+      display: flex;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    span {
+      align-items: center;
+      padding-left: 9.6rem;
+    }
+  }
+}

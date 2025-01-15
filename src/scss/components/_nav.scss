@@ -1,0 +1,16 @@
+.nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    color: #000;
+  }
+}

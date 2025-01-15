@@ -1,0 +1,138 @@
+.products {
+  &__slider {
+    margin-bottom: 3rem;
+    .swiper-slide {
+      width: auto;
+    }
+  }
+  &__tab {
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 100%;
+    color: #000;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    @include mobile {
+      font-size: 3.6rem;
+    }
+    @include hover {
+      color: #0b548e;
+    }
+    &.swiper-slide-thumb-active {
+      color: #0b548e;
+    }
+  }
+}
+
+.prod {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3.5rem;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  &__left {
+    grid-column: 4 span;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: 10rem;
+      height: 10rem;
+      clip-path: polygon(0 0, 100% 100%, 100% 0);
+      background-color: #fff;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  &__right {
+    grid-column: 6 span;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      bottom: 0;
+      width: 10rem;
+      height: 10rem;
+      clip-path: polygon(0 100%, 0 0, 100% 100%);
+      background-color: #fff;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__left,
+  &__right {
+    padding: 6rem;
+    background-color: #fff;
+    position: relative;
+
+    @include mobile {
+      padding: 5rem;
+    }
+  }
+  &__row {
+    display: flex;
+    gap: 3rem;
+    & > ul {
+      flex: 1;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 2rem;
+      & > ul {
+        flex: unset;
+      }
+    }
+  }
+  &__capture {
+    margin: 0;
+    margin-bottom: 4rem;
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 100%;
+    color: #000;
+    @include mobile {
+      font-size: 2.4rem;
+      margin-bottom: 3rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    @include mobile {
+      margin-top: 3rem;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 35rem;
+    }
+  }
+  &__char {
+    font-family: var(--font-family);
+    font-size: 1.8rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: #000;
+    @include mobile {
+      font-size: 1.7rem;
+    }
+    span {
+      font-weight: 300;
+    }
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+      @include mobile {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
