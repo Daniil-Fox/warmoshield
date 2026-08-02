@@ -1,0 +1,174 @@
+$catalog-modal-cut: 10rem;
+
+.catalog-modal {
+  padding: 5rem var(--container-offset);
+
+  @include mobile {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  &__body {
+    position: relative;
+    width: 100%;
+    height: 63.6rem;
+    max-width: var(--content-width);
+    padding: 0;
+    clip-path: none;
+    overflow: hidden;
+    background-color: #fff;
+
+    @include mobile {
+      margin: 0;
+      width: 100%;
+      height: 100dvh;
+      max-width: 100%;
+      min-height: 0;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    z-index: 3;
+    width: 2.8rem;
+    height: 2.8rem;
+    padding: 0.7rem;
+    @include mobile {
+      top: 3rem;
+      right: 3rem;
+    }
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 58% 42%;
+    height: 100%;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: 30rem minmax(0, 1fr);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - #{$catalog-modal-cut}),
+      calc(100% - #{$catalog-modal-cut}) 100%,
+      0 100%
+    );
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem;
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
+
+    @include mobile {
+      padding: 7rem 3rem 5rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5rem;
+    padding-right: 6rem;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 100%;
+    color: #000;
+
+    @include mobile {
+      margin-bottom: 4rem;
+      padding-right: 4rem;
+      font-size: 4rem;
+    }
+  }
+
+  &__accordions {
+    flex: 1;
+  }
+}
+
+.catalog-accordion {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 150%;
+    text-align: left;
+    color: #000;
+    cursor: pointer;
+
+    @include mobile {
+      font-size: 1.8rem;
+      padding: 1.6rem 0;
+      gap: 2rem;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1rem;
+    color: #000;
+    transition: transform 0.3s ease;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  &__inner {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: #000;
+
+    @include mobile {
+      font-size: 1.6rem;
+    }
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &.is-open {
+    .catalog-accordion__icon {
+      transform: rotate(180deg);
+    }
+  }
+}

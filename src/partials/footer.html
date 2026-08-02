@@ -1,76 +1,95 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__container">
-      <div class="footer__left">
+      <div class="footer__column footer__column--left">
+        <a
+          href="./"
+          class="footer__logo footer__logo--desktop"
+          aria-label="ВармоЩит — на главную"
+        >
+          <img src="./img/logo.svg" alt="ВармоЩит" />
+        </a>
+        <div class="footer__map address__map" id="map"></div>
+      </div>
+
+      <div class="footer__column footer__column--middle">
+        <a
+          href="./"
+          class="footer__logo footer__logo--mobile"
+          aria-label="ВармоЩит — на главную"
+        >
+          <img src="./img/logo.svg" alt="ВармоЩит" />
+        </a>
+
         <address class="footer__address address">
           <div class="footer__capture">Отдел продаж</div>
           <div class="address__info">
-            <span>
+            <div class="address__contacts">
               <a href="tel:89089888869">8 908 9 8888 69</a>
-              <a href="mailto:info@mbm-vl.ru">info@mbm-vl.ru</a>
-            </span>
+              <a href="mailto:info@varmoschit.ru">info@varmoschit.ru</a>
+            </div>
             <span>Владивосток, ул. Днепровская, д. 25, офис 9</span>
             <span>Пн - Пт с 9:00 до 18:00</span>
           </div>
-          <div class="address__map" id="map"></div>
         </address>
 
-        <nav class="footer__nav f-nav">
+        <nav class="footer__nav f-nav" aria-label="Навигация в подвале">
           <div class="footer__capture">Навигация по сайту</div>
           <ul class="list-reset f-nav__list">
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Эконом </a>
+              <a href="#" class="f-nav__link">Проекты</a>
             </li>
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Стандарт </a>
+              <a href="#" class="f-nav__link">Сертификаты</a>
             </li>
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Стандарт Плюс </a>
-            </li>
-            <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Мастер </a>
-            </li>
-            <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Премиум </a>
-            </li>
-            <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Люкс </a>
+              <a href="#specs" class="f-nav__link">Технические характеристики</a>
             </li>
           </ul>
         </nav>
       </div>
 
-      <div class="footer__right">
-        <a href="./" class="footer__logo">
-          <img src="./img/logo-footer.svg" alt="" />
-        </a>
+      <div class="footer__column footer__column--right">
         <div class="footer__links">
           <a href="#">Политика обработки персональных данных</a>
           <a href="#">Документация</a>
         </div>
+
         <div class="footer__bottom">
           <span>Не является публичной офертой</span>
-          <span>ООО “MBM”, 2024 ©</span>
+          <span>ВармоЩит, 2026 ©</span>
         </div>
+
+        <div class="peremena"></div>
       </div>
     </div>
   </div>
 </footer>
+
 <script src="https://api-maps.yandex.ru/v3/?apikey=221cbec3-01c0-4b1a-8417-d7d65e719c35&lang=ru_RU"></script>
 <script>
   initMap();
   async function initMap() {
     await ymaps3.ready;
 
-    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
-
+    const {
+      YMap,
+      YMapDefaultSchemeLayer,
+      YMapDefaultFeaturesLayer,
+      YMapMarker,
+    } = ymaps3;
+    const coordinates = [131.911297, 43.137943];
     const map = new YMap(document.getElementById("map"), {
       location: {
-        center: [37.588144, 55.733842],
-        zoom: 10,
+        center: coordinates,
+        zoom: 15,
       },
     });
+    const markerElement = document.createElement("div");
 
+    markerElement.className = "map-marker";
     map.addChild(new YMapDefaultSchemeLayer());
+    map.addChild(new YMapDefaultFeaturesLayer());
+    map.addChild(new YMapMarker({ coordinates }, markerElement));
   }
 </script>

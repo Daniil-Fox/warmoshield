@@ -1,0 +1,134 @@
+$catalog-cut: 8rem;
+
+.catalog {
+  &__header {
+    margin-bottom: 6rem;
+
+    @include mobile {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 150%;
+    color: #000;
+
+    @include mobile {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__slider {
+    overflow: visible;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.catalog-item {
+  background-color: #fff;
+  &__img {
+    width: 100%;
+    height: 45rem;
+    overflow: hidden;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - #{$catalog-cut}),
+      calc(100% - #{$catalog-cut}) 100%,
+      0 100%
+    );
+
+    @include mobile {
+      height: 30rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 120%;
+    color: #000;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 3rem;
+    flex: 1;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #000;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    padding: 1.5rem 3rem;
+
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 100%;
+    text-align: center;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
+
+    &--primary {
+      background-color: #000;
+      color: #fff;
+
+      @include hover {
+        background-color: #236599;
+      }
+    }
+
+    &--outline {
+      border: 2px solid #000;
+      background-color: #fff;
+      color: #000;
+
+      @include hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+}

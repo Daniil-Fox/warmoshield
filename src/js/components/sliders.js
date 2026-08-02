@@ -15,6 +15,38 @@ new Swiper(".partners__slider", {
   },
 });
 
+new Swiper(".catalog__slider", {
+  slidesPerView: 1.1,
+  spaceBetween: 20,
+  watchOverflow: true,
+  breakpoints: {
+    577: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
+
+new Swiper(".projects__slider", {
+  slidesPerView: 1.15,
+  spaceBetween: 30,
+  freeMode: true,
+  breakpoints: {
+    577: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
+
 const prodTabs = new Swiper(".products__slider", {
   slidesPerView: "auto",
   spaceBetween: 50,

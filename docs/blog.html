@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>MaxGraph New Site</title>
+  <link
+    rel="preload"
+    href="fonts/Commissioner-SemiBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Light.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-SemiBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Bold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/WixMadeforDisplay-SemiBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a href="./" class="header__logo logo">
+        <img src="./img/logo.svg" alt="" />
+      </a>
+      <nav class="header__nav nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="./#projects" class="nav__link">Проекты</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#certificates" class="nav__link">Сертификаты</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#specs" class="nav__link">Технические характеристики</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <a href="tel:89089888869" class="header__tel">8 908 9 8888 69</a>
+        <button class="btn btn--stroke btn-reset header__btn modal-btn">
+          <span>Оставить заявку</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="modal">
+  <div class="modal__body">
+    <div class="modal__header">
+      <div class="modal__title">Заказать звонок</div>
+      <div class="modal__close">
+        <svg
+          width="44"
+          height="43"
+          viewBox="0 0 44 43"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 1.5L42 41.5M42 1.5L2 41.5"
+            stroke="black"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+    </div>
+    <form action="#" class="modal__form form modal-form">
+      <label class="form__label">
+        <input
+          type="text"
+          placeholder="Укажите ваше имя"
+          name="Имя"
+          class="form__input input-name"
+        />
+      </label>
+      <label class="form__label">
+        <input
+          type="tel"
+          placeholder="Ваш контактный телефон"
+          name="Телефон"
+          class="form__input input-tel"
+        />
+      </label>
+      <button class="btn btn-reset form__btn">
+        <span>Оставить заявку</span>
+      </button>
+      <small class="form__agree">
+        Нажимая кнопку «Отправить заявку», вы соглашаетесь
+        <a href="#">с политикой обработки персональных данных</a>
+      </small>
+    </form>
+  </div>
+</div>
+
+    <main class="main">
+      <section class="blog-page">
+  <div class="container">
+    <h1 class="title2 blog-page__title">Блог</h1>
+
+    <div class="blog-page__list">
+      <article class="blog-page__card blog-page-card">
+        <a class="blog-page-card__image" href="#">
+          <img src="./img/blog/01.webp" alt="Посещение завода SUNTHERM" />
+        </a>
+        <div class="blog-page-card__content">
+          <h2 class="blog-page-card__title">
+            <a href="#">Посетили завод SUNTHERM: контроль качества из первых рук</a>
+          </h2>
+          <p class="blog-page-card__description">
+            Наша команда лично побывала на производственной площадке SUNTHERM в Китае.
+            Проверили все этапы: от подготовки сырья до упаковки готовых плит. Убедились —
+            оборудование европейское, контроль жёсткий, продукция соответствует заявленным
+            характеристикам. Теперь уверенно рекомендуем партнёрам и клиентам.
+          </p>
+          <div class="blog-page-card__footer">
+            <a class="blog-page-card__link" href="#">Читать</a>
+            <time class="blog-page-card__date" datetime="2026-06-15">15.06.2026</time>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-page__card blog-page-card">
+        <a class="blog-page-card__image" href="#">
+          <img src="./img/blog/02.webp" alt="Промышленный объект в Китае" />
+        </a>
+        <div class="blog-page-card__content">
+          <h2 class="blog-page-card__title">
+            <a href="#">Наш утеплитель на китайской АЭС: объект сдан</a>
+          </h2>
+          <p class="blog-page-card__description">
+            Завершены работы по теплоизоляции на атомной электростанции в Китае.
+            Применялся базальтовый утеплитель, способный выдерживать высокие температуры
+            и жёсткие требования безопасности. Продукция прошла многоступенчатый контроль
+            и показала полное соответствие нормативам.
+          </p>
+          <div class="blog-page-card__footer">
+            <a class="blog-page-card__link" href="#">Читать</a>
+            <time class="blog-page-card__date" datetime="2026-06-15">15.06.2026</time>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-page__card blog-page-card">
+        <a class="blog-page-card__image" href="#">
+          <img src="./img/blog/01.webp" alt="Производство теплоизоляции" />
+        </a>
+        <div class="blog-page-card__content">
+          <h2 class="blog-page-card__title">
+            <a href="#">Утеплитель под задачу: для чего нужен каждый тип</a>
+          </h2>
+          <p class="blog-page-card__description">
+            Каждая задача требует своего материала. Огнестойкость важна для бань и
+            дымоходов, упругость — для каркасных стен, экологичность — для жилых комнат.
+            Разбираем три типа утеплителя и их реальное применение. Подбирайте осознанно,
+            а не по привычке.
+          </p>
+          <div class="blog-page-card__footer">
+            <a class="blog-page-card__link" href="#">Читать</a>
+            <time class="blog-page-card__date" datetime="2026-06-15">15.06.2026</time>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <button type="button" class="btn-reset blog-page__more">Показать ещё</button>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__column footer__column--left">
+        <a
+          href="./"
+          class="footer__logo footer__logo--desktop"
+          aria-label="ВармоЩит — на главную"
+        >
+          <img src="./img/logo.svg" alt="ВармоЩит" />
+        </a>
+        <div class="footer__map address__map" id="map"></div>
+      </div>
+
+      <div class="footer__column footer__column--middle">
+        <a
+          href="./"
+          class="footer__logo footer__logo--mobile"
+          aria-label="ВармоЩит — на главную"
+        >
+          <img src="./img/logo.svg" alt="ВармоЩит" />
+        </a>
+
+        <address class="footer__address address">
+          <div class="footer__capture">Отдел продаж</div>
+          <div class="address__info">
+            <div class="address__contacts">
+              <a href="tel:89089888869">8 908 9 8888 69</a>
+              <a href="mailto:info@varmoschit.ru">info@varmoschit.ru</a>
+            </div>
+            <span>Владивосток, ул. Днепровская, д. 25, офис 9</span>
+            <span>Пн — Пт с 9:00 до 18:00</span>
+          </div>
+        </address>
+
+        <nav class="footer__nav f-nav" aria-label="Навигация в подвале">
+          <div class="footer__capture">Навигация по сайту</div>
+          <ul class="list-reset f-nav__list">
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link">Проекты</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#" class="f-nav__link">Сертификаты</a>
+            </li>
+            <li class="f-nav__item">
+              <a href="#specs" class="f-nav__link">Технические характеристики</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__column footer__column--right">
+        <div class="footer__links">
+          <a href="#">Политика обработки персональных данных</a>
+          <a href="#">Документация</a>
+        </div>
+
+        <div class="footer__bottom">
+          <span>Не является публичной офертой</span>
+          <span>ВармоЩит, 2026 ©</span>
+        </div>
+
+        <div class="peremena"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://api-maps.yandex.ru/v3/?apikey=221cbec3-01c0-4b1a-8417-d7d65e719c35&lang=ru_RU"></script>
+<script>
+  initMap();
+  async function initMap() {
+    await ymaps3.ready;
+
+    const {
+      YMap,
+      YMapDefaultSchemeLayer,
+      YMapDefaultFeaturesLayer,
+      YMapMarker,
+    } = ymaps3;
+    const coordinates = [131.911297, 43.137943];
+    const map = new YMap(document.getElementById("map"), {
+      location: {
+        center: coordinates,
+        zoom: 15,
+      },
+    });
+    const markerElement = document.createElement("div");
+
+    markerElement.className = "map-marker";
+    map.addChild(new YMapDefaultSchemeLayer());
+    map.addChild(new YMapDefaultFeaturesLayer());
+    map.addChild(new YMapMarker({ coordinates }, markerElement));
+  }
+</script>
+
+  </div>
+</body>
+
+</html>

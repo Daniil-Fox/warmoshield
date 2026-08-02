@@ -1,0 +1,97 @@
+$project-card-cut: 8rem;
+
+.projects {
+  &__title {
+    margin-bottom: 5rem;
+  }
+
+  &__slider {
+    overflow: visible;
+
+    .swiper-wrapper {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+
+  &__slide {
+    height: auto;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+
+  &__img {
+    width: 100%;
+    height: 61rem;
+    overflow: hidden;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - #{$project-card-cut}),
+      calc(100% - #{$project-card-cut}) 100%,
+      0 100%
+    );
+
+    @include mobile {
+      height: 42rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 120%;
+    color: #000;
+
+    @include mobile {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    margin-top: auto;
+    border: 2px solid #000;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 100%;
+    color: #000;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+
+    @include hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

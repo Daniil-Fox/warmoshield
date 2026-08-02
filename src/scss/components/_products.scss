@@ -1,138 +1,181 @@
 .products {
-  &__slider {
+  &__title {
     margin-bottom: 3rem;
+
+    sup {
+      vertical-align: super;
+      font-size: 0.35em;
+    }
+  }
+
+  &__slider {
+    margin-bottom: 5rem;
+
+    @include mobile {
+      margin-bottom: 3rem;
+    }
+
     .swiper-slide {
       width: auto;
     }
   }
+
+  &__tabs {
+    align-items: center;
+  }
+
   &__tab {
+    width: auto;
+    font-family: var(--font-family);
     font-weight: 600;
-    font-size: 5rem;
-    line-height: 100%;
+    font-size: 2rem;
+    line-height: 120%;
     color: #000;
     transition: color 0.2s ease-in-out;
-    cursor: pointer;
+
     @include mobile {
-      font-size: 3.6rem;
+      font-size: 1.8rem;
     }
+
     @include hover {
-      color: #0b548e;
+      color: #ed1c24;
     }
+
     &.swiper-slide-thumb-active {
-      color: #0b548e;
+      color: #ed1c24;
     }
+  }
+
+  &__slider-content {
+    overflow: visible;
   }
 }
 
 .prod {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, minmax(0, 1fr));
   gap: 3.5rem;
+
   @include mobile {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-  }
-  &__left {
-    grid-column: 4 span;
-    &::before {
-      content: "";
-      position: absolute;
-      right: 100%;
-      top: 0;
-      width: 10rem;
-      height: 10rem;
-      clip-path: polygon(0 0, 100% 100%, 100% 0);
-      background-color: #fff;
-      @include mobile {
-        display: none;
-      }
-    }
-  }
-  &__right {
-    grid-column: 6 span;
-    &::after {
-      content: "";
-      position: absolute;
-      left: 100%;
-      bottom: 0;
-      width: 10rem;
-      height: 10rem;
-      clip-path: polygon(0 100%, 0 0, 100% 100%);
-      background-color: #fff;
-      @include mobile {
-        display: none;
-      }
-    }
+    gap: 2rem;
   }
 
-  &__left,
-  &__right {
-    padding: 6rem;
+  &__image,
+  &__info {
     background-color: #fff;
-    position: relative;
-
-    @include mobile {
-      padding: 5rem;
-    }
   }
-  &__row {
-    display: flex;
-    gap: 3rem;
-    & > ul {
-      flex: 1;
-    }
+
+  &__image {
+    grid-column: 5 span;
+    min-height: 49.7rem;
+    position: relative;
     @include mobile {
-      flex-direction: column;
-      gap: 2rem;
-      & > ul {
-        flex: unset;
+      min-height: 30rem;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1.1);
+      width: 100%;
+      height: 104%;
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    &_scale {
+      img {
+        transform: translate(-50%, -50%) scale(1.3);
       }
     }
   }
-  &__capture {
-    margin: 0;
-    margin-bottom: 4rem;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 5 span;
+    padding: 6rem;
+
+    @include mobile {
+      padding: 4rem 3rem;
+    }
+  }
+
+  &__title {
+    margin: 0 0 3rem;
     font-weight: 600;
     font-size: 2.6rem;
     line-height: 100%;
-    color: #000;
+    color: var(--black);
+
     @include mobile {
-      font-size: 2.4rem;
       margin-bottom: 3rem;
+      font-size: 2.2rem;
     }
   }
-  &__img {
+
+  &__list {
+    margin: 0 0 4rem;
     width: 100%;
-    height: auto;
-    margin-top: 1.5rem;
-    @include mobile {
-      margin-top: 3rem;
+  }
+
+  &__characteristic {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
     }
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      max-height: 35rem;
+
+    dt,
+    dd {
+      display: inline;
+      margin: 0;
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: var(--black);
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    dt {
+      &::after {
+        content: ":";
+      }
+    }
+
+    dd {
+      font-weight: 400;
     }
   }
-  &__char {
+
+  &__comparison {
+    margin-top: auto;
+    border: 1px solid #000;
+    padding: 1.4rem 3rem;
+    width: 100%;
     font-family: var(--font-family);
-    font-size: 1.8rem;
-    line-height: 150%;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
     color: #000;
+    transition:
+      color 0.2s ease-in-out,
+      background-color 0.2s ease-in-out;
+
     @include mobile {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
-    span {
-      font-weight: 300;
-    }
-    &:not(:last-child) {
-      margin-bottom: 2.5rem;
-      @include mobile {
-        margin-bottom: 2rem;
-      }
+
+    @include hover {
+      color: #fff;
+      background-color: #000;
     }
   }
 }

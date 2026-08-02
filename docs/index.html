@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -61,9 +61,9 @@
   <script defer src="js/main.js"></script>
 </head>
 
-  <body class="page__body">
-    <div class="site-container">
-      <header class="header">
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
   <div class="container">
     <div class="header__container">
       <a href="./" class="header__logo logo">
@@ -72,7 +72,13 @@
       <nav class="header__nav nav">
         <ul class="list-reset nav__list">
           <li class="nav__item">
-            <a href="#products" class="nav__link">Технические характеристики</a>
+            <a href="./#projects" class="nav__link">Проекты</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#certificates" class="nav__link">Сертификаты</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#specs" class="nav__link">Технические характеристики</a>
           </li>
         </ul>
       </nav>
@@ -133,22 +139,16 @@
   </div>
 </div>
 
-      <main class="main">
-        <section class="hero">
+    <main class="main">
+      <section class="hero">
   <div class="container">
-    <div
-      class="hero__container"
-      style="background-image: url('./img/hero.webp')"
-    >
+    <div class="hero__container" style="background-image: url('./img/hero.webp')">
       <div class="hero__content">
         <h1 class="hero__title">
-          базальтовый утеплитель высокого качества
+          утеплитель высокого качества
           <span>
             Есть в
-            <img src="./img/t1.webp" alt="" /> рулонах и <img
-              src="./img/t2.webp"
-              alt=""
-            />
+            <img src="./img/t1.webp" alt="" /> рулонах и <img src="./img/t2.webp" alt="" />
             листах
           </span>
         </h1>
@@ -163,42 +163,114 @@
       </div>
 
       <div class="hero__img">
-        <img src="./img/object.webp" alt="" />
+        <picture>
+          <source srcset="./img/hero-mob.webp" type="image/webp" media="(max-width: 576px)">
+          <img src="./img/object.webp" width="1016" height="882" alt="" />
+        </picture>
       </div>
     </div>
   </div>
 </section>
- <section class="use">
+ <section class="catalog" id="products">
+  <div class="container">
+    <div class="catalog__header">
+      <h2 class="title2 catalog__title">Наша продукция</h2>
+      <p class="catalog__desc">
+        Мы предлагаем 3 вида продукции, под собственной торговой маркой ВармоЩит
+      </p>
+    </div>
+
+    <div class="catalog__slider swiper">
+      <div class="catalog__items swiper-wrapper">
+      <article class="catalog__item catalog-item swiper-slide">
+        <div class="catalog-item__img">
+          <img src="./img/products/02.webp" alt="Вармо" />
+        </div>
+        <div class="catalog-item__content">
+          <h3 class="catalog-item__title">Вармо</h3>
+          <p class="catalog-item__text">
+            Минеральная плита на основе базальтового волокна высочайшего качества.
+            Для вентилируемых фасадов высокоэтажных домов. Для нагружаемых и
+            ненагружаемых конструкций. Для эксплуатируемых крыш и для мокрых
+            фасадов.
+          </p>
+          <div class="catalog-item__buttons">
+            <button
+              type="button"
+              class="btn-reset catalog-item__btn catalog-item__btn--primary"
+              data-catalog-modal="varmo"
+            >
+              Подробнее
+            </button>
+            <a href="#specs" class="btn-reset catalog-item__btn catalog-item__btn--outline">
+              Характеристики
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="catalog__item catalog-item swiper-slide">
+        <div class="catalog-item__img">
+          <img src="./img/products/03.webp" alt="СтеклоВармо" />
+        </div>
+        <div class="catalog-item__content">
+          <h3 class="catalog-item__title">СтеклоВармо</h3>
+          <p class="catalog-item__text">
+            Утеплитель из стекловолокна. Упругий, легкий, удобный в монтаже. Для
+            стен, перегородок и перекрытий в малоэтажном и каркасном строительстве.
+          </p>
+          <div class="catalog-item__buttons">
+            <button
+              type="button"
+              class="btn-reset catalog-item__btn catalog-item__btn--primary"
+              data-catalog-modal="steklovarmo"
+            >
+              Подробнее
+            </button>
+            <a href="#specs" class="btn-reset catalog-item__btn catalog-item__btn--outline">
+              Характеристики
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="catalog__item catalog-item swiper-slide">
+        <div class="catalog-item__img">
+          <img src="./img/products/04.webp" alt="ЭкоВармо" />
+        </div>
+        <div class="catalog-item__content">
+          <h3 class="catalog-item__title">ЭкоВармо</h3>
+          <p class="catalog-item__text">
+            Экологически чистый утеплитель из стекловолокна. Безопасен для людей и
+            окружающей среды. Для жилых помещений и объектов с высокими требованиями
+            к экологичности.
+          </p>
+          <div class="catalog-item__buttons">
+            <button
+              type="button"
+              class="btn-reset catalog-item__btn catalog-item__btn--primary"
+              data-catalog-modal="ekovarmo"
+            >
+              Подробнее
+            </button>
+            <a href="#specs" class="btn-reset catalog-item__btn catalog-item__btn--outline">
+              Характеристики
+            </a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="use use--insulation">
   <div class="container">
     <h2 class="title2 use__title">Применяется в утеплении</h2>
     <div class="use__items">
       <div class="use__item use-item">
         <div class="use-item__img">
-          <img src="./img/use/01.webp" alt="" />
-        </div>
-        <div class="use-item__badge">
-          <div class="use-item__text">Фасадов</div>
-        </div>
-      </div>
-      <div class="use__item use-item">
-        <div class="use-item__img">
-          <img src="./img/use/02.webp" alt="" />
-        </div>
-        <div class="use-item__badge">
-          <div class="use-item__text">Каркасных стен</div>
-        </div>
-      </div>
-      <div class="use__item use-item">
-        <div class="use-item__img">
-          <img src="./img/use/03.webp" alt="" />
-        </div>
-        <div class="use-item__badge">
-          <div class="use-item__text">Пола</div>
-        </div>
-      </div>
-      <div class="use__item use-item">
-        <div class="use-item__img">
-          <img src="./img/use/04.webp" alt="" />
+          <img src="./img/use/04.webp" alt="Утепление скатной крыши" />
         </div>
         <div class="use-item__badge">
           <div class="use-item__text">Скатной крыши</div>
@@ -206,17 +278,49 @@
       </div>
       <div class="use__item use-item">
         <div class="use-item__img">
-          <img src="./img/use/05.webp" alt="" />
+          <img src="./img/use/05.webp" alt="Утепление балконов" />
         </div>
         <div class="use-item__badge">
           <div class="use-item__text">Балконов</div>
+        </div>
+      </div>
+      <div class="use__item use-item">
+        <div class="use-item__img">
+          <img src="./img/use/06.webp" alt="Утепление эксплуатируемой крыши" />
+        </div>
+        <div class="use-item__badge">
+          <div class="use-item__text">Эксплуатируемой<br />крыши</div>
+        </div>
+      </div>
+      <div class="use__item use-item">
+        <div class="use-item__img">
+          <img src="./img/use/01.webp" alt="Утепление фасадов" />
+        </div>
+        <div class="use-item__badge">
+          <div class="use-item__text">Фасадов</div>
+        </div>
+      </div>
+      <div class="use__item use-item">
+        <div class="use-item__img">
+          <img src="./img/use/02.webp" alt="Утепление каркасных стен" />
+        </div>
+        <div class="use-item__badge">
+          <div class="use-item__text">Каркасных<br />стен</div>
+        </div>
+      </div>
+      <div class="use__item use-item">
+        <div class="use-item__img">
+          <img src="./img/use/03.webp" alt="Утепление пола" />
+        </div>
+        <div class="use-item__badge">
+          <div class="use-item__text">Пола</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-        <section class="partners">
+      <section class="partners">
   <div class="container">
     <h2 class="title2 partners__title">Партнеры</h2>
     <div class="partners__container">
@@ -294,805 +398,1552 @@
   </div>
 </section>
 
-        <section class="products" id="products">
+      <section class="projects" id="projects">
   <div class="container">
-    <div class="products__slider swiper">
-      <div class="products__tabs swiper-wrapper">
-        <div class="products__tab swiper-slide active" data-tab="Эконом">
-          Эконом
-        </div>
-        <div class="products__tab swiper-slide" data-tab="Стандарт">
-          Стандарт
-        </div>
-        <div class="products__tab swiper-slide" data-tab="Стандарт Плюс">
-          Стандарт Плюс
-        </div>
-        <div class="products__tab swiper-slide" data-tab="Мастер">Мастер</div>
-        <div class="products__tab swiper-slide" data-tab="Премиум">Премиум</div>
-        <div class="products__tab swiper-slide" data-tab="Люкс">Люкс</div>
+    <h2 class="title2 projects__title">
+      Проекты, где уже применен наш утеплитель
+    </h2>
+
+    <div class="projects__slider swiper">
+      <div class="swiper-wrapper">
+        <article class="projects__slide project-card swiper-slide">
+          <div class="project-card__img">
+            <img src="./img/projects/01.webp" alt="Аэропорт Дасин" />
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Аэропорт Дасин</h3>
+            <button
+              type="button"
+              class="btn-reset project-card__btn"
+              data-project-modal="daxing"
+            >
+              Подробнее
+            </button>
+          </div>
+        </article>
+
+        <article class="projects__slide project-card swiper-slide">
+          <div class="project-card__img">
+            <img src="./img/projects/02.webp" alt="АЭС в Пекине" />
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">АЭС в Пекине</h3>
+            <button
+              type="button"
+              class="btn-reset project-card__btn"
+              data-project-modal="beijing-npp"
+            >
+              Подробнее
+            </button>
+          </div>
+        </article>
+
+        <article class="projects__slide project-card swiper-slide">
+          <div class="project-card__img">
+            <img src="./img/projects/03.webp" alt="Детский сад" />
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Детский сад</h3>
+            <button
+              type="button"
+              class="btn-reset project-card__btn"
+              data-project-modal="kindergarten"
+            >
+              Подробнее
+            </button>
+          </div>
+        </article>
+
+        <article class="projects__slide project-card swiper-slide">
+          <div class="project-card__img">
+            <img src="./img/projects/04.webp" alt="Торговый комплекс" />
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Торговый комплекс</h3>
+            <button
+              type="button"
+              class="btn-reset project-card__btn"
+              data-project-modal="shopping-center"
+            >
+              Подробнее
+            </button>
+          </div>
+        </article>
+
       </div>
     </div>
   </div>
-  <div class="products__slider-content swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="products__content container prod">
-          <div class="prod__left">
-            <div class="prod__capture">Основная информация</div>
-            <ul class="list-reset prod__list">
-              <li class="prod__char">
-                <span>Размер листа (д/ш/в), мм: </span>
-                1200×600×50 и 1200×600×100
-              </li>
-              <li class="prod__char">
-                <span>Количество в упаковке, шт: </span>
-                6 (50 мм толщина) и 3 (100 мм толщина)
-              </li>
-              <li class="prod__char">
-                <span>Материал: </span>
-                Базальтовое волокно
-              </li>
-              <li class="prod__char">
-                <span>Группа горючести:</span>
-                НГ
-              </li>
-            </ul>
-            <div class="prod__img">
-              <img src="./img/products/01.webp" alt="" />
-            </div>
-          </div>
-          <div class="prod__right">
-            <div class="prod__capture">Технические характеристики</div>
-            <div class="prod__row">
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Под серия: </span>
-                  Эконом
-                </li>
-                <li class="prod__char">
-                  <span>Плотность, кг/м³: </span>
-                  60
-                </li>
-                <li class="prod__char">
-                  <span>Маркировка / Спецификация: </span>
-                  Вент
-                </li>
-                <li class="prod__char">
-                  <span>Назначение: </span>
-                  Применяемые в строительстве в качестве огнезащиты,
-                  теплоизоляции строительных конструкций — ограждающих наружных
-                  конструкций, стен, кровель, перекрытий, покрытий, перегородок.
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Прочность на сжатие при 10% линейной деформации, МПа:
-                  </span>
-                  0,015
-                </li>
-                <li class="prod__char">
-                  <span>Влажность по массе, %, не более: </span>
-                  0,5
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Водопоглощение при кратковременном частичном погружении,
-                    кг/м², не более:
-                  </span>
-                  0,3
-                </li>
-                <li class="prod__char">
-                  <span>Водопоглощение по объему, %, не более: </span>
-                  1,5
-                </li>
-              </ul>
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Испытания при мин. температуре печи 750 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Испытания при макс. температуре печи 775 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость не менее, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Содержание органических веществ, не более, %: </span>
-                  4
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 10°С, Вт/м•°К: </span>
-                  0,035
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 25°С, Вт/м•°К: </span>
-                  0,036
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. А, Вт/м•°К: </span>
-                  0,038
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. Б, Вт/м•°К: </span>
-                  0,039
-                </li>
-                <li class="prod__char">
-                  <span>Элементы зданий и сооружений: </span>
-                  Вентилируемые фасады
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+</section>
+
+      <section class="products" id="specs">
+  <div class="container">
+    <h2 class="title2 products__title">
+      Серии продукции ВармоЩит<sup>®</sup>
+    </h2>
+
+    <div class="products__slider swiper">
+      <div class="products__tabs swiper-wrapper">
+        <button type="button" class="btn-reset products__tab swiper-slide">
+          Вармо
+        </button>
+        <button type="button" class="btn-reset products__tab swiper-slide">
+          СтеклоВармо
+        </button>
+        <button type="button" class="btn-reset products__tab swiper-slide">
+          ЭкоВармо
+        </button>
       </div>
-      <div class="swiper-slide">
-        <div class="products__content container prod">
-          <div class="prod__left">
-            <div class="prod__capture">Основная информация</div>
-            <ul class="list-reset prod__list">
-              <li class="prod__char">
-                <span>Размер листа (д/ш/в), мм: </span>
-                1200×600×50 и 1200×600×100
-              </li>
-              <li class="prod__char">
-                <span>Количество в упаковке, шт: </span>
-                6 (50 мм толщина) и 3 (100 мм толщина)
-              </li>
-              <li class="prod__char">
-                <span>Материал: </span>
-                Базальтовое волокно
-              </li>
-              <li class="prod__char">
-                <span>Группа горючести:</span>
-                НГ
-              </li>
-            </ul>
-            <div class="prod__img">
-              <img src="./img/products/01.webp" alt="" />
+    </div>
+
+    <div class="products__slider-content swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="products__content prod">
+            <div class="prod__image">
+              <img src="./img/products/010.webp" alt="Теплоизоляция Вармо" />
             </div>
-          </div>
-          <div class="prod__right">
-            <div class="prod__capture">Технические характеристики</div>
-            <div class="prod__row">
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Под серия: </span>
-                  Эконом
-                </li>
-                <li class="prod__char">
-                  <span>Плотность, кг/м³: </span>
-                  60
-                </li>
-                <li class="prod__char">
-                  <span>Маркировка / Спецификация: </span>
-                  Вент
-                </li>
-                <li class="prod__char">
-                  <span>Назначение: </span>
-                  Применяемые в строительстве в качестве огнезащиты,
-                  теплоизоляции строительных конструкций — ограждающих наружных
-                  конструкций, стен, кровель, перекрытий, покрытий, перегородок.
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Прочность на сжатие при 10% линейной деформации, МПа:
-                  </span>
-                  0,015
-                </li>
-                <li class="prod__char">
-                  <span>Влажность по массе, %, не более: </span>
-                  0,5
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Водопоглощение при кратковременном частичном погружении,
-                    кг/м², не более:
-                  </span>
-                  0,3
-                </li>
-                <li class="prod__char">
-                  <span>Водопоглощение по объему, %, не более: </span>
-                  1,5
-                </li>
-              </ul>
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Испытания при мин. температуре печи 750 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Испытания при макс. температуре печи 775 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость не менее, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Содержание органических веществ, не более, %: </span>
-                  4
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 10°С, Вт/м•°К: </span>
-                  0,035
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 25°С, Вт/м•°К: </span>
-                  0,036
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. А, Вт/м•°К: </span>
-                  0,038
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. Б, Вт/м•°К: </span>
-                  0,039
-                </li>
-                <li class="prod__char">
-                  <span>Элементы зданий и сооружений: </span>
-                  Вентилируемые фасады
-                </li>
-              </ul>
+            <div class="prod__info">
+              <h3 class="prod__title">Характеристики</h3>
+              <dl class="prod__list">
+                <div class="prod__characteristic">
+                  <dt>Материал</dt>
+                  <dd>Базальтовое волокно</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Плотность, кг/м³</dt>
+                  <dd>от 60</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Теплопроводность при 10°С, Вт/м·°К</dt>
+                  <dd>0,035</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Группа горючести</dt>
+                  <dd>НГ</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Назначение</dt>
+                  <dd>
+                    Для вентилируемых фасадов, нагружаемых и ненагружаемых
+                    конструкций, эксплуатируемых крыш и мокрых фасадов.
+                  </dd>
+                </div>
+              </dl>
+              <button type="button" class="btn-reset prod__comparison" data-comparison-modal="varmo">
+                Смотреть сравнительную таблицу
+              </button>
             </div>
-          </div>
+          </article>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="products__content container prod">
-          <div class="prod__left">
-            <div class="prod__capture">Основная информация</div>
-            <ul class="list-reset prod__list">
-              <li class="prod__char">
-                <span>Размер листа (д/ш/в), мм: </span>
-                1200×600×50 и 1200×600×100
-              </li>
-              <li class="prod__char">
-                <span>Количество в упаковке, шт: </span>
-                6 (50 мм толщина) и 3 (100 мм толщина)
-              </li>
-              <li class="prod__char">
-                <span>Материал: </span>
-                Базальтовое волокно
-              </li>
-              <li class="prod__char">
-                <span>Группа горючести:</span>
-                НГ
-              </li>
-            </ul>
-            <div class="prod__img">
-              <img src="./img/products/01.webp" alt="" />
+
+        <div class="swiper-slide">
+          <article class="products__content prod">
+            <div class="prod__image prod__image_scale">
+              <img src="./img/products/011.webp" alt="Теплоизоляция СтеклоВармо" />
             </div>
-          </div>
-          <div class="prod__right">
-            <div class="prod__capture">Технические характеристики</div>
-            <div class="prod__row">
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Под серия: </span>
-                  Эконом
-                </li>
-                <li class="prod__char">
-                  <span>Плотность, кг/м³: </span>
-                  60
-                </li>
-                <li class="prod__char">
-                  <span>Маркировка / Спецификация: </span>
-                  Вент
-                </li>
-                <li class="prod__char">
-                  <span>Назначение: </span>
-                  Применяемые в строительстве в качестве огнезащиты,
-                  теплоизоляции строительных конструкций — ограждающих наружных
-                  конструкций, стен, кровель, перекрытий, покрытий, перегородок.
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Прочность на сжатие при 10% линейной деформации, МПа:
-                  </span>
-                  0,015
-                </li>
-                <li class="prod__char">
-                  <span>Влажность по массе, %, не более: </span>
-                  0,5
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Водопоглощение при кратковременном частичном погружении,
-                    кг/м², не более:
-                  </span>
-                  0,3
-                </li>
-                <li class="prod__char">
-                  <span>Водопоглощение по объему, %, не более: </span>
-                  1,5
-                </li>
-              </ul>
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Испытания при мин. температуре печи 750 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Испытания при макс. температуре печи 775 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость не менее, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Содержание органических веществ, не более, %: </span>
-                  4
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 10°С, Вт/м•°К: </span>
-                  0,035
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 25°С, Вт/м•°К: </span>
-                  0,036
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. А, Вт/м•°К: </span>
-                  0,038
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. Б, Вт/м•°К: </span>
-                  0,039
-                </li>
-                <li class="prod__char">
-                  <span>Элементы зданий и сооружений: </span>
-                  Вентилируемые фасады
-                </li>
-              </ul>
+            <div class="prod__info">
+              <h3 class="prod__title">Характеристики</h3>
+              <dl class="prod__list">
+                <div class="prod__characteristic">
+                  <dt>Материал</dt>
+                  <dd>Стекловолокно</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Плотность, кг/м³</dt>
+                  <dd>10–16</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Теплопроводность, Вт/м·°К</dt>
+                  <dd>0,040–0,045</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Группа горючести</dt>
+                  <dd>НГ/Г1 в зависимости от марки</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Назначение</dt>
+                  <dd>
+                    Для стен, перегородок и перекрытий в малоэтажном и каркасном
+                    строительстве.
+                  </dd>
+                </div>
+              </dl>
+              <button type="button" class="btn-reset prod__comparison" data-comparison-modal="steklovarmo">
+                Смотреть сравнительную таблицу
+              </button>
             </div>
-          </div>
+          </article>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="products__content container prod">
-          <div class="prod__left">
-            <div class="prod__capture">Основная информация</div>
-            <ul class="list-reset prod__list">
-              <li class="prod__char">
-                <span>Размер листа (д/ш/в), мм: </span>
-                1200×600×50 и 1200×600×100
-              </li>
-              <li class="prod__char">
-                <span>Количество в упаковке, шт: </span>
-                6 (50 мм толщина) и 3 (100 мм толщина)
-              </li>
-              <li class="prod__char">
-                <span>Материал: </span>
-                Базальтовое волокно
-              </li>
-              <li class="prod__char">
-                <span>Группа горючести:</span>
-                НГ
-              </li>
-            </ul>
-            <div class="prod__img">
-              <img src="./img/products/01.webp" alt="" />
+
+        <div class="swiper-slide">
+          <article class="products__content prod">
+            <div class="prod__image">
+              <img src="./img/products/012.webp" alt="Теплоизоляция ЭкоВармо" />
             </div>
-          </div>
-          <div class="prod__right">
-            <div class="prod__capture">Технические характеристики</div>
-            <div class="prod__row">
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Под серия: </span>
-                  Эконом
-                </li>
-                <li class="prod__char">
-                  <span>Плотность, кг/м³: </span>
-                  60
-                </li>
-                <li class="prod__char">
-                  <span>Маркировка / Спецификация: </span>
-                  Вент
-                </li>
-                <li class="prod__char">
-                  <span>Назначение: </span>
-                  Применяемые в строительстве в качестве огнезащиты,
-                  теплоизоляции строительных конструкций — ограждающих наружных
-                  конструкций, стен, кровель, перекрытий, покрытий, перегородок.
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Прочность на сжатие при 10% линейной деформации, МПа:
-                  </span>
-                  0,015
-                </li>
-                <li class="prod__char">
-                  <span>Влажность по массе, %, не более: </span>
-                  0,5
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Водопоглощение при кратковременном частичном погружении,
-                    кг/м², не более:
-                  </span>
-                  0,3
-                </li>
-                <li class="prod__char">
-                  <span>Водопоглощение по объему, %, не более: </span>
-                  1,5
-                </li>
-              </ul>
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Испытания при мин. температуре печи 750 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Испытания при макс. температуре печи 775 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость не менее, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Содержание органических веществ, не более, %: </span>
-                  4
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 10°С, Вт/м•°К: </span>
-                  0,035
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 25°С, Вт/м•°К: </span>
-                  0,036
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. А, Вт/м•°К: </span>
-                  0,038
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. Б, Вт/м•°К: </span>
-                  0,039
-                </li>
-                <li class="prod__char">
-                  <span>Элементы зданий и сооружений: </span>
-                  Вентилируемые фасады
-                </li>
-              </ul>
+            <div class="prod__info">
+              <h3 class="prod__title">Характеристики</h3>
+              <dl class="prod__list">
+                <div class="prod__characteristic">
+                  <dt>Материал</dt>
+                  <dd>Экологичное стекловолокно</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Состав</dt>
+                  <dd>Без формальдегидов и агрессивных летучих соединений</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Формат</dt>
+                  <dd>Плиты</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Безопасность</dt>
+                  <dd>Подходит для жилых и общественных помещений</dd>
+                </div>
+                <div class="prod__characteristic">
+                  <dt>Назначение</dt>
+                  <dd>
+                    Для объектов с высокими требованиями к экологичности, включая
+                    детские, медицинские и образовательные учреждения.
+                  </dd>
+                </div>
+              </dl>
+              <button type="button" class="btn-reset prod__comparison" data-comparison-modal="ekovarmo">
+                Смотреть сравнительную таблицу
+              </button>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="products__content container prod">
-          <div class="prod__left">
-            <div class="prod__capture">Основная информация</div>
-            <ul class="list-reset prod__list">
-              <li class="prod__char">
-                <span>Размер листа (д/ш/в), мм: </span>
-                1200×600×50 и 1200×600×100
-              </li>
-              <li class="prod__char">
-                <span>Количество в упаковке, шт: </span>
-                6 (50 мм толщина) и 3 (100 мм толщина)
-              </li>
-              <li class="prod__char">
-                <span>Материал: </span>
-                Базальтовое волокно
-              </li>
-              <li class="prod__char">
-                <span>Группа горючести:</span>
-                НГ
-              </li>
-            </ul>
-            <div class="prod__img">
-              <img src="./img/products/01.webp" alt="" />
-            </div>
-          </div>
-          <div class="prod__right">
-            <div class="prod__capture">Технические характеристики</div>
-            <div class="prod__row">
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Под серия: </span>
-                  Эконом
-                </li>
-                <li class="prod__char">
-                  <span>Плотность, кг/м³: </span>
-                  60
-                </li>
-                <li class="prod__char">
-                  <span>Маркировка / Спецификация: </span>
-                  Вент
-                </li>
-                <li class="prod__char">
-                  <span>Назначение: </span>
-                  Применяемые в строительстве в качестве огнезащиты,
-                  теплоизоляции строительных конструкций — ограждающих наружных
-                  конструкций, стен, кровель, перекрытий, покрытий, перегородок.
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Прочность на сжатие при 10% линейной деформации, МПа:
-                  </span>
-                  0,015
-                </li>
-                <li class="prod__char">
-                  <span>Влажность по массе, %, не более: </span>
-                  0,5
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Водопоглощение при кратковременном частичном погружении,
-                    кг/м², не более:
-                  </span>
-                  0,3
-                </li>
-                <li class="prod__char">
-                  <span>Водопоглощение по объему, %, не более: </span>
-                  1,5
-                </li>
-              </ul>
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Испытания при мин. температуре печи 750 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Испытания при макс. температуре печи 775 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость не менее, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Содержание органических веществ, не более, %: </span>
-                  4
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 10°С, Вт/м•°К: </span>
-                  0,035
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 25°С, Вт/м•°К: </span>
-                  0,036
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. А, Вт/м•°К: </span>
-                  0,038
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. Б, Вт/м•°К: </span>
-                  0,039
-                </li>
-                <li class="prod__char">
-                  <span>Элементы зданий и сооружений: </span>
-                  Вентилируемые фасады
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="products__content container prod">
-          <div class="prod__left">
-            <div class="prod__capture">Основная информация</div>
-            <ul class="list-reset prod__list">
-              <li class="prod__char">
-                <span>Размер листа (д/ш/в), мм: </span>
-                1200×600×50 и 1200×600×100
-              </li>
-              <li class="prod__char">
-                <span>Количество в упаковке, шт: </span>
-                6 (50 мм толщина) и 3 (100 мм толщина)
-              </li>
-              <li class="prod__char">
-                <span>Материал: </span>
-                Базальтовое волокно
-              </li>
-              <li class="prod__char">
-                <span>Группа горючести:</span>
-                НГ
-              </li>
-            </ul>
-            <div class="prod__img">
-              <img src="./img/products/01.webp" alt="" />
-            </div>
-          </div>
-          <div class="prod__right">
-            <div class="prod__capture">Технические характеристики</div>
-            <div class="prod__row">
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Под серия: </span>
-                  Эконом
-                </li>
-                <li class="prod__char">
-                  <span>Плотность, кг/м³: </span>
-                  60
-                </li>
-                <li class="prod__char">
-                  <span>Маркировка / Спецификация: </span>
-                  Вент
-                </li>
-                <li class="prod__char">
-                  <span>Назначение: </span>
-                  Применяемые в строительстве в качестве огнезащиты,
-                  теплоизоляции строительных конструкций — ограждающих наружных
-                  конструкций, стен, кровель, перекрытий, покрытий, перегородок.
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Прочность на сжатие при 10% линейной деформации, МПа:
-                  </span>
-                  0,015
-                </li>
-                <li class="prod__char">
-                  <span>Влажность по массе, %, не более: </span>
-                  0,5
-                </li>
-                <li class="prod__char">
-                  <span
-                    >Водопоглощение при кратковременном частичном погружении,
-                    кг/м², не более:
-                  </span>
-                  0,3
-                </li>
-                <li class="prod__char">
-                  <span>Водопоглощение по объему, %, не более: </span>
-                  1,5
-                </li>
-              </ul>
-              <ul class="list-reset prod__list">
-                <li class="prod__char">
-                  <span>Испытания при мин. температуре печи 750 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Испытания при макс. температуре печи 775 С: </span>
-                  Не воспламенился
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Паропроницаемость не менее, мг/(м•ч•Па): </span>
-                  1
-                </li>
-                <li class="prod__char">
-                  <span>Содержание органических веществ, не более, %: </span>
-                  4
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 10°С, Вт/м•°К: </span>
-                  0,035
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при 25°С, Вт/м•°К: </span>
-                  0,036
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. А, Вт/м•°К: </span>
-                  0,038
-                </li>
-                <li class="prod__char">
-                  <span>Теплопроводность при усл. Б, Вт/м•°К: </span>
-                  0,039
-                </li>
-                <li class="prod__char">
-                  <span>Элементы зданий и сооружений: </span>
-                  Вентилируемые фасады
-                </li>
-              </ul>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-      </main>
-      <footer class="footer">
+      <section class="certificates" id="certificates">
+  <div class="container">
+    <h2 class="title2 certificates__title">Сертификаты и документация</h2>
+    <div class="certificates__content">
+      <div class="certificates__list">
+        <a class="certificates__item" href="" target="_blank" rel="noopener">
+          <span class="certificates__image">
+            <img src="./img/serts/01.jpg" alt="Сертификат соответствия системы менеджмента качества" />
+          </span>
+          <span class="certificates__name">
+            Сертификат соответствия сертификации Системы менеджмента качества КНР
+          </span>
+        </a>
+        <a class="certificates__item" href="" target="_blank" rel="noopener">
+          <span class="certificates__image">
+            <img src="./img/serts/02.jpg" alt="Декларация о соответствии" />
+          </span>
+          <span class="certificates__name">
+            Декларация о соответствии ГОСТ 32314-2012 Р1
+          </span>
+        </a>
+        <a class="certificates__item" href="" target="_blank" rel="noopener">
+          <span class="certificates__image">
+            <img src="./img/serts/03.jpg" alt="Протокол испытаний плиты" />
+          </span>
+          <span class="certificates__name">
+            Протокол испытаний плиты ППБ-282/10-2024 от 07.10.2024 Р-1
+          </span>
+        </a>
+        <a class="certificates__item" href="" target="_blank" rel="noopener">
+          <span class="certificates__image">
+            <img src="./img/serts/04.jpg" alt="Сертификат UDEM" />
+          </span>
+          <span class="certificates__name">Сертификат UDEM КНР</span>
+        </a>
+        <a class="certificates__item" href="" target="_blank" rel="noopener">
+          <span class="certificates__image">
+            <img src="./img/serts/05.jpg" alt="Сертификат пожарной безопасности" />
+          </span>
+          <span class="certificates__name">
+            Сертификат соответствия требованиям пожарной безопасности КНР-1
+          </span>
+        </a>
+        <a class="certificates__item" href="" target="_blank" rel="noopener">
+          <span class="certificates__image">
+            <img src="./img/serts/06.jpg" alt="Сертификат соответствия требованиям пожарной безопасности" />
+          </span>
+          <span class="certificates__name">
+            Сертификат соответствия требованиям пожарной безопасности Р1-1
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="blog">
+  <div class="container">
+    <div class="blog__header">
+      <h2 class="title2 blog__title">Блог</h2>
+      <a class="blog__all blog__all--desktop" href="./blog.html">Все статьи</a>
+    </div>
+
+    <div class="blog__grid">
+      <article class="blog__card blog-card">
+        <a class="blog-card__image" href="#">
+          <img src="./img/blog/01.webp" alt="Посещение завода SUNTHERM" />
+        </a>
+        <div class="blog-card__content">
+          <h3 class="blog-card__title">
+            <a href="#">Посетили завод SUNTHERM: контроль качества из первых рук</a>
+          </h3>
+          <p class="blog-card__description">
+            Наша команда лично побывала на производственной площадке SunTherm Китая,
+            чтобы увидеть все этапы изготовления теплоизоляции.
+          </p>
+          <div class="blog-card__footer">
+            <a class="blog-card__link" href="#">Читать</a>
+            <time class="blog-card__date" datetime="2026-06-15">15.06.2026</time>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog__card blog-card">
+        <a class="blog-card__image" href="#">
+          <img src="./img/blog/02.webp" alt="Промышленный объект в Китае" />
+        </a>
+        <div class="blog-card__content">
+          <h3 class="blog-card__title">
+            <a href="#">Наш утеплитель на китайской АЭС: объект сдан</a>
+          </h3>
+          <p class="blog-card__description">
+            Завершены работы по теплоизоляции на атомной электростанции в Китае.
+            Применялся базальтовый утеплитель, способный выдерживать высокие температуры.
+          </p>
+          <div class="blog-card__footer">
+            <a class="blog-card__link" href="#">Читать</a>
+            <time class="blog-card__date" datetime="2026-06-15">15.06.2026</time>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog__card blog-card">
+        <a class="blog-card__image" href="#">
+          <img src="./img/blog/02.webp" alt="Промышленный объект с теплоизоляцией" />
+        </a>
+        <div class="blog-card__content">
+          <h3 class="blog-card__title">
+            <a href="#">Утеплитель под задачу: для чего нужен каждый тип</a>
+          </h3>
+          <p class="blog-card__description">
+            Каждая задача требует своего материала. Огнестойкость важна для технических
+            помещений, а лёгкость монтажа — для частного строительства.
+          </p>
+          <div class="blog-card__footer">
+            <a class="blog-card__link" href="#">Читать</a>
+            <time class="blog-card__date" datetime="2026-06-15">15.06.2026</time>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog__card blog-card">
+        <a class="blog-card__image" href="#">
+          <img src="./img/blog/03.webp" alt="Современное здание с теплоизоляцией" />
+        </a>
+        <div class="blog-card__content">
+          <h3 class="blog-card__title">
+            <a href="#">Базальт или стекловолокно: что выбрать и почему это важно</a>
+          </h3>
+          <p class="blog-card__description">
+            Наша команда лично побывала на производственной площадке и разобралась,
+            какой материал подходит для разных условий эксплуатации.
+          </p>
+          <div class="blog-card__footer">
+            <a class="blog-card__link" href="#">Читать</a>
+            <time class="blog-card__date" datetime="2026-06-15">15.06.2026</time>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <a class="blog__all blog__all--mobile" href="./blog.html">Все статьи</a>
+  </div>
+</section>
+
+      <section class="factories">
+  <div class="container">
+    <div class="factories__header">
+      <h2 class="title2 factories__title">
+        Заводы, представителями которых мы являемся
+      </h2>
+      <p class="factories__description">
+        Являемся официальными дистрибьюторами заводов-производителей теплоизоляции.
+        Прямые поставки, гарантии качества, вся сопроводительная документация.
+      </p>
+    </div>
+
+    <div class="factories__content">
+      <picture class="factories__image">
+        <source media="(max-width: 576px)" srcset="./img/prod.webp" />
+        <source srcset="./img/prod.webp" type="image/webp" />
+        <img src="./img/prod.jpg" alt="Производственная линия теплоизоляции" />
+      </picture>
+
+      <div class="factories__accordion">
+        <article class="factories__item">
+          <button
+            type="button"
+            class="btn-reset factories__button"
+            aria-expanded="false"
+          >
+            <span>IKING GROUP</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" aria-hidden="true">
+              <path d="M1 1L8 8L15 1" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </button>
+          <div class="factories__panel">
+            <div class="factories__panel-inner">
+              <p>
+                Международная промышленная группа, выпускающая материалы для
+                теплоизоляции жилых, коммерческих и производственных объектов.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="factories__item">
+          <button
+            type="button"
+            class="btn-reset factories__button"
+            aria-expanded="false"
+          >
+            <span>SUNTHERM</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" aria-hidden="true">
+              <path d="M1 1L8 8L15 1" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </button>
+          <div class="factories__panel">
+            <div class="factories__panel-inner">
+              <p>
+                Производитель теплоизоляционных материалов из стекловолокна.
+                Продукция применяется в частном и промышленном строительстве.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="factories__item active">
+          <button
+            type="button"
+            class="btn-reset factories__button"
+            aria-expanded="true"
+          >
+            <span>XINTAILONG</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" aria-hidden="true">
+              <path d="M1 1L8 8L15 1" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </button>
+          <div class="factories__panel">
+            <div class="factories__panel-inner">
+              <p>
+                Китайский завод полного цикла по производству минеральной
+                теплоизоляции.
+              </p>
+              <p>
+                Выпускает базальтовый и стекловолоконный утеплитель на современном
+                европейском оборудовании.
+              </p>
+              <p>Продукция сертифицирована по международным стандартам.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
   <div class="container">
     <div class="footer__container">
-      <div class="footer__left">
+      <div class="footer__column footer__column--left">
+        <a
+          href="./"
+          class="footer__logo footer__logo--desktop"
+          aria-label="ВармоЩит — на главную"
+        >
+          <img src="./img/logo.svg" alt="ВармоЩит" />
+        </a>
+        <div class="footer__map address__map" id="map"></div>
+      </div>
+
+      <div class="footer__column footer__column--middle">
+        <a
+          href="./"
+          class="footer__logo footer__logo--mobile"
+          aria-label="ВармоЩит — на главную"
+        >
+          <img src="./img/logo.svg" alt="ВармоЩит" />
+        </a>
+
         <address class="footer__address address">
           <div class="footer__capture">Отдел продаж</div>
           <div class="address__info">
-            <span>
+            <div class="address__contacts">
               <a href="tel:89089888869">8 908 9 8888 69</a>
-              <a href="mailto:info@mbm-vl.ru">info@mbm-vl.ru</a>
-            </span>
+              <a href="mailto:info@varmoschit.ru">info@varmoschit.ru</a>
+            </div>
             <span>Владивосток, ул. Днепровская, д. 25, офис 9</span>
             <span>Пн — Пт с 9:00 до 18:00</span>
           </div>
-          <div class="address__map" id="map"></div>
         </address>
 
-        <nav class="footer__nav f-nav">
+        <nav class="footer__nav f-nav" aria-label="Навигация в подвале">
           <div class="footer__capture">Навигация по сайту</div>
           <ul class="list-reset f-nav__list">
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Эконом </a>
+              <a href="#" class="f-nav__link">Проекты</a>
             </li>
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Стандарт </a>
+              <a href="#" class="f-nav__link">Сертификаты</a>
             </li>
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Стандарт Плюс </a>
-            </li>
-            <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Мастер </a>
-            </li>
-            <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Премиум </a>
-            </li>
-            <li class="f-nav__item">
-              <a href="#" class="f-nav__link"> Люкс </a>
+              <a href="#specs" class="f-nav__link">Технические характеристики</a>
             </li>
           </ul>
         </nav>
       </div>
 
-      <div class="footer__right">
-        <a href="./" class="footer__logo">
-          <img src="./img/logo-footer.svg" alt="" />
-        </a>
+      <div class="footer__column footer__column--right">
         <div class="footer__links">
           <a href="#">Политика обработки персональных данных</a>
           <a href="#">Документация</a>
         </div>
+
         <div class="footer__bottom">
           <span>Не является публичной офертой</span>
-          <span>ООО «MBM», 2024 ©</span>
+          <span>ВармоЩит, 2026 ©</span>
         </div>
+
+        <div class="peremena"></div>
       </div>
     </div>
   </div>
 </footer>
+
 <script src="https://api-maps.yandex.ru/v3/?apikey=221cbec3-01c0-4b1a-8417-d7d65e719c35&lang=ru_RU"></script>
 <script>
   initMap();
   async function initMap() {
     await ymaps3.ready;
 
-    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
-
+    const {
+      YMap,
+      YMapDefaultSchemeLayer,
+      YMapDefaultFeaturesLayer,
+      YMapMarker,
+    } = ymaps3;
+    const coordinates = [131.911297, 43.137943];
     const map = new YMap(document.getElementById("map"), {
       location: {
-        center: [37.588144, 55.733842],
-        zoom: 10,
+        center: coordinates,
+        zoom: 15,
       },
     });
+    const markerElement = document.createElement("div");
 
+    markerElement.className = "map-marker";
     map.addChild(new YMapDefaultSchemeLayer());
+    map.addChild(new YMapDefaultFeaturesLayer());
+    map.addChild(new YMapMarker({ coordinates }, markerElement));
   }
 </script>
 
+    <div class="modal catalog-modal" data-modal-id="varmo" aria-hidden="true">
+  <div class="modal__body catalog-modal__body">
+    <button type="button" class="btn-reset modal__close catalog-modal__close" aria-label="Закрыть">
+      <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 1.5L42 41.5M42 1.5L2 41.5" stroke="black" stroke-width="4" />
+      </svg>
+    </button>
+    <div class="catalog-modal__layout">
+      <div class="catalog-modal__img">
+        <img src="./img/products/02.webp" alt="Вармо" />
+      </div>
+      <div class="catalog-modal__content">
+        <h2 class="catalog-modal__title">Вармо</h2>
+        <div class="catalog-modal__accordions">
+          <div class="catalog-accordion is-open">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Описание продукта</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Вармо — минеральная плита на основе базальтового волокна высочайшего
+                  качества. Продукт сочетает высокие теплоизоляционные свойства,
+                  огнестойкость и долговечность. Подходит для вентилируемых фасадов
+                  высокоэтажных домов, нагружаемых и ненагружаемых конструкций,
+                  эксплуатируемых крыш и мокрых фасадов.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Характеристики</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Материал: базальтовое волокно. Группа горючести: НГ. Плотность от 60
+                  кг/м³. Теплопроводность при 10°С — 0,035 Вт/м·°К. Размер листа:
+                  1200×600×50 и 1200×600×100 мм. Высокая прочность на сжатие и
+                  стабильность геометрических размеров.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Применение</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Применяется для теплоизоляции и огнезащиты строительных конструкций:
+                  вентилируемых фасадов, стен, кровель, перекрытий, покрытий и
+                  перегородок. Используется в многоэтажном и промышленном строительстве,
+                  а также при устройстве мокрых фасадных систем.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+  </div>
+</div>
+
+<div class="modal catalog-modal" data-modal-id="steklovarmo" aria-hidden="true">
+  <div class="modal__body catalog-modal__body">
+    <button type="button" class="btn-reset modal__close catalog-modal__close" aria-label="Закрыть">
+      <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 1.5L42 41.5M42 1.5L2 41.5" stroke="black" stroke-width="4" />
+      </svg>
+    </button>
+    <div class="catalog-modal__layout">
+      <div class="catalog-modal__img">
+        <img src="./img/products/03.webp" alt="СтеклоВармо" />
+      </div>
+      <div class="catalog-modal__content">
+        <h2 class="catalog-modal__title">СтеклоВармо</h2>
+        <div class="catalog-modal__accordions">
+          <div class="catalog-accordion is-open">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Описание продукта</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  СтеклоВармо — утеплитель из стекловолокна. Упругий, лёгкий и удобный
+                  в монтаже. Предназначен для стен, перегородок и перекрытий в
+                  малоэтажном и каркасном строительстве. Обеспечивает эффективную
+                  теплоизоляцию и комфортный микроклимат в помещениях.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Основные этапы производства</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Производство включает плавление стекломассы, формирование волокна,
+                  нанесение связующего, формование изделия и термическую обработку.
+                  На каждом этапе контролируется однородность структуры и стабильность
+                  характеристик готовой продукции.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Особенности технологии</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Технология обеспечивает равномерное распределение волокон, высокую
+                  упругость и восстановление формы после сжатия. Материал сохраняет
+                  теплоизоляционные свойства на протяжении всего срока службы
+                  конструкции.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Основные сферы применения</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Каркасные дома, частное строительство, перегородки, чердачные и
+                  межэтажные перекрытия, стены с облицовкой гипсокартоном и другими
+                  материалами.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Ключевые преимущества</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Лёгкость монтажа, высокая звукоизоляция, устойчивость к деформациям,
+                  долговечность и доступная стоимость по сравнению с аналогами.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Основные технические характеристики</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Теплопроводность 0,040–0,045 Вт/м·°К. Плотность 10–16 кг/м³.
+                  Группа горючести — НГ/Г1 в зависимости от марки. Форматы: плиты и
+                  рулоны различной толщины.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Условия хранения и транспортировки</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Хранить в сухих закрытых помещениях, защищённых от влаги и прямых
+                  солнечных лучей. Транспортировать в заводской упаковке без
+                  механических повреждений.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Экологическая безопасность</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Материал не выделяет вредных веществ в процессе эксплуатации.
+                  Соответствует действующим санитарным и экологическим нормам для
+                  жилых и общественных зданий.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Рекомендации по монтажу</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Укладывать плотно, без зазоров, с перехлёстом стыков. Использовать
+                  средства индивидуальной защиты. Обеспечить пароизоляцию там, где это
+                  предусмотрено проектом.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Ограничения по применению</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Не рекомендуется использовать в зонах постоянного контакта с водой
+                  без дополнительной гидроизоляции. Не применять при температуре
+                  окружающей среды ниже −50°С и выше +660°С.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal catalog-modal" data-modal-id="ekovarmo" aria-hidden="true">
+  <div class="modal__body catalog-modal__body">
+    <button type="button" class="btn-reset modal__close catalog-modal__close" aria-label="Закрыть">
+      <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 1.5L42 41.5M42 1.5L2 41.5" stroke="black" stroke-width="4" />
+      </svg>
+    </button>
+    <div class="catalog-modal__layout">
+      <div class="catalog-modal__img">
+        <img src="./img/products/04.webp" alt="ЭкоВармо" />
+      </div>
+      <div class="catalog-modal__content">
+        <h2 class="catalog-modal__title">ЭкоВармо</h2>
+        <div class="catalog-modal__accordions">
+          <div class="catalog-accordion is-open">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Экологичность как ключевое преимущество</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  ЭкоВармо — экологически чистый утеплитель из стекловолокна,
+                  безопасный для людей и окружающей среды. Разработан для жилых
+                  помещений и объектов с повышенными требованиями к экологичности.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Натуральное связующее на растительной основе</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  В составе используется связующее на растительной основе, что снижает
+                  долю синтетических компонентов и делает материал более безопасным
+                  для жилых пространств.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Природный цвет</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Натуральный оттенок волокна достигается без использования
+                  искусственных красителей, что подтверждает экологический подход к
+                  производству продукции.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Экологичность и безопасность для человека и окружающей среды</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Материал не содержит формальдегидов и других агрессивных летучих
+                  соединений. Подходит для детских, медицинских и образовательных
+                  учреждений.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Низкие выбросы вредных веществ</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Производственный цикл оптимизирован для минимизации выбросов и
+                  отходов. Готовая продукция проходит контроль на соответствие
+                  экологическим стандартам.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Отсутствие синтетических компонентов</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Рецептура материала максимально приближена к натуральным компонентам,
+                  что снижает аллергенную нагрузку и улучшает микроклимат в помещении.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Соответствие экологическим стандартам</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Продукция соответствует требованиям действующих ГОСТ и санитарных
+                  норм для материалов, применяемых во внутренних конструкциях зданий.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Применение в «зелёном» строительстве</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Рекомендуется для проектов с акцентом на энергоэффективность и
+                  экологическую сертификацию: эко-дома, пассивные дома, объекты LEED
+                  и BREEAM.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Рекомендации по монтажу</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Монтаж аналогичен стандартным стекловолокнистым утеплителям: плотная
+                  укладка без зазоров, использование СИЗ, соблюдение проектной
+                  пароизоляции.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-accordion">
+            <button type="button" class="btn-reset catalog-accordion__header">
+              <span>Ограничения по применению</span>
+              <svg class="catalog-accordion__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10L19 1" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+            <div class="catalog-accordion__content">
+              <div class="catalog-accordion__inner">
+                <p>
+                  Не использовать во влажных зонах без защиты от проникновения воды.
+                  Не применять в конструкциях с постоянным воздействием агрессивных
+                  сред без дополнительной изоляции.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal project-modal" data-modal-id="daxing" aria-hidden="true">
+  <div class="modal__body project-modal__body">
+    <div class="project-modal__layout">
+      <div class="project-modal__main-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/projects/01.webp" alt="Аэропорт Дасин" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/projects/01-2.webp" alt="Терминал аэропорта Дасин" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/projects/01-3.webp" alt="Интерьер аэропорта Дасин" />
+          </div>
+        </div>
+      </div>
+      <div class="project-modal__content">
+        <div class="project-modal__header">
+          <h2 class="project-modal__title">Аэропорт Дасин</h2>
+          <button
+            type="button"
+            class="btn-reset modal__close project-modal__close"
+            aria-label="Закрыть"
+          >
+            <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 1.5L42 41.5M42 1.5L2 41.5" stroke="black" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+        <div class="project-modal__description">
+          <p>
+            Международный аэропорт Дасин в Пекине — один из крупнейших в мире,
+            площадью более 700 000 м².
+          </p>
+          <p>
+            При строительстве применялись базальтовый утеплитель для
+            теплоизоляции кровли и стекловолокно для внутренних конструкций.
+            Материал выбран за огнестойкость, долговечность и способность
+            выдерживать экстремальные перепады температур.
+          </p>
+          <p>
+            Утеплитель обеспечивает стабильный микроклимат внутри терминала,
+            снижает энергозатраты на отопление и охлаждение.
+          </p>
+          <p>Объект сдан и успешно эксплуатируется с 2019 года.</p>
+        </div>
+        <div class="project-modal__thumbs swiper">
+          <div class="swiper-wrapper">
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/01.webp" alt="" />
+            </button>
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/01-2.webp" alt="" />
+            </button>
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/01-3.webp" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal project-modal" data-modal-id="beijing-npp" aria-hidden="true">
+  <div class="modal__body project-modal__body">
+    <div class="project-modal__layout">
+      <div class="project-modal__main-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/projects/02.webp" alt="АЭС в Пекине" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/projects/02-2.webp" alt="Комплекс АЭС в Пекине" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/projects/02-3.webp" alt="Технические сооружения АЭС" />
+          </div>
+        </div>
+      </div>
+      <div class="project-modal__content">
+        <div class="project-modal__header">
+          <h2 class="project-modal__title">АЭС в Пекине</h2>
+          <button
+            type="button"
+            class="btn-reset modal__close project-modal__close"
+            aria-label="Закрыть"
+          >
+            <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 1.5L42 41.5M42 1.5L2 41.5" stroke="black" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+        <div class="project-modal__description">
+          <p>
+            При строительстве атомной электростанции применены негорючие
+            теплоизоляционные материалы на основе базальтового волокна.
+          </p>
+          <p>
+            Утеплитель используется в наружных ограждающих конструкциях,
+            технических помещениях и инженерных системах. Он сохраняет
+            характеристики при высоких температурах и повышенной влажности.
+          </p>
+          <p>
+            Выбранное решение позволило повысить энергоэффективность объекта и
+            обеспечить необходимые показатели пожарной безопасности.
+          </p>
+        </div>
+        <div class="project-modal__thumbs swiper">
+          <div class="swiper-wrapper">
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/02.webp" alt="" />
+            </button>
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/02-2.webp" alt="" />
+            </button>
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/02-3.webp" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal project-modal" data-modal-id="kindergarten" aria-hidden="true">
+  <div class="modal__body project-modal__body">
+    <div class="project-modal__layout">
+      <div class="project-modal__main-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/projects/03.webp" alt="Детский сад" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/projects/03-2.webp" alt="Фасад детского сада" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/projects/03-3.webp" alt="Территория детского сада" />
+          </div>
+        </div>
+      </div>
+      <div class="project-modal__content">
+        <div class="project-modal__header">
+          <h2 class="project-modal__title">Детский сад</h2>
+          <button
+            type="button"
+            class="btn-reset modal__close project-modal__close"
+            aria-label="Закрыть"
+          >
+            <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 1.5L42 41.5M42 1.5L2 41.5" stroke="black" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+        <div class="project-modal__description">
+          <p>
+            Для утепления фасада, кровли и внутренних перегородок детского сада
+            использованы безопасные негорючие материалы ВармоЩит.
+          </p>
+          <p>
+            Теплоизоляция помогает поддерживать комфортную температуру в течение
+            всего года, снижает уровень внешнего шума и расходы на отопление.
+          </p>
+          <p>
+            Материалы соответствуют требованиям к экологической и пожарной
+            безопасности образовательных учреждений.
+          </p>
+        </div>
+        <div class="project-modal__thumbs swiper">
+          <div class="swiper-wrapper">
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/03.webp" alt="" />
+            </button>
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/03-2.webp" alt="" />
+            </button>
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/03-3.webp" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal project-modal" data-modal-id="shopping-center" aria-hidden="true">
+  <div class="modal__body project-modal__body">
+    <div class="project-modal__layout">
+      <div class="project-modal__main-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/projects/04.webp" alt="Торговый комплекс" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/projects/04-2.webp" alt="Фасад торгового комплекса" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/projects/04-3.webp" alt="Торговый комплекс" />
+          </div>
+        </div>
+      </div>
+      <div class="project-modal__content">
+        <div class="project-modal__header">
+          <h2 class="project-modal__title">Торговый комплекс</h2>
+          <button
+            type="button"
+            class="btn-reset modal__close project-modal__close"
+            aria-label="Закрыть"
+          >
+            <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 1.5L42 41.5M42 1.5L2 41.5" stroke="black" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+        <div class="project-modal__description">
+          <p>
+            Вентилируемый фасад и кровля торгового комплекса утеплены
+            минераловатными плитами ВармоЩит.
+          </p>
+          <p>
+            Материал обеспечивает эффективную теплоизоляцию больших площадей,
+            устойчив к деформации и не поддерживает горение.
+          </p>
+          <p>
+            Применение утеплителя позволило снизить эксплуатационные расходы и
+            обеспечить комфортный микроклимат для посетителей и сотрудников.
+          </p>
+        </div>
+        <div class="project-modal__thumbs swiper">
+          <div class="swiper-wrapper">
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/04.webp" alt="" />
+            </button>
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/04-2.webp" alt="" />
+            </button>
+            <button type="button" class="btn-reset project-modal__thumb swiper-slide">
+              <img src="./img/projects/04-3.webp" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div
+  class="modal comparison-modal"
+  data-comparison-id="varmo"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="comparison-varmo-title"
+>
+  <div class="comparison-modal__body">
+    <div class="comparison-modal__header">
+      <h2 class="comparison-modal__title" id="comparison-varmo-title">
+        Сравнительная таблица Вармо
+      </h2>
+      <button
+        type="button"
+        class="btn-reset comparison-modal__close"
+        aria-label="Закрыть сравнительную таблицу"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M2 2L18 18M18 2L2 18" fill="none" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="comparison-modal__table-wrap">
+      <table class="comparison-modal__table">
+        <thead>
+          <tr>
+            <th scope="col">Наименование показателя</th>
+            <th scope="col">Значение показателя</th>
+            <th scope="col">Метод испытания</th>
+            <th scope="col">Вармо-45</th>
+            <th scope="col">Вармо-50</th>
+            <th scope="col">Вармо-60</th>
+            <th scope="col">Вармо-70</th>
+            <th scope="col">Вармо-80</th>
+            <th scope="col">Вармо-90</th>
+            <th scope="col">Вармо-100</th>
+            <th scope="col">Вармо-110</th>
+            <th scope="col">Вармо-120</th>
+            <th scope="col">Вармо-130</th>
+            <th scope="col">Вармо-140</th>
+            <th scope="col">Вармо-150</th>
+            <th scope="col">Вармо-160</th>
+            <th scope="col">Вармо-170</th>
+            <th scope="col">Вармо-180</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              Прочность при сжатии при 10% относительной деформации, кПа, не менее
+            </th>
+            <td>Нормируемое значение</td>
+            <td>
+              ГОСТ 9573-2012, ГОСТ Р 58897-2020, ГОСТ 31913-2011, EN 13162
+            </td>
+            <td>15</td>
+            <td>15</td>
+            <td>16</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>22</td>
+            <td>23</td>
+            <td>23</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal comparison-modal"
+  data-comparison-id="steklovarmo"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="comparison-steklovarmo-title"
+>
+  <div class="comparison-modal__body comparison-modal__body--auto">
+    <div class="comparison-modal__header">
+      <h2 class="comparison-modal__title" id="comparison-steklovarmo-title">
+        Сравнительная таблица СтеклоВармо
+      </h2>
+      <button
+        type="button"
+        class="btn-reset comparison-modal__close"
+        aria-label="Закрыть сравнительную таблицу"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M2 2L18 18M18 2L2 18" fill="none" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="comparison-modal__tabs" role="tablist">
+      <button
+        type="button"
+        class="btn-reset comparison-modal__tab"
+        role="tab"
+        aria-selected="false"
+        data-comparison-tab="roll"
+      >
+        Рулон
+      </button>
+      <button
+        type="button"
+        class="btn-reset comparison-modal__tab active"
+        role="tab"
+        aria-selected="true"
+        data-comparison-tab="plate"
+      >
+        Плита
+      </button>
+    </div>
+
+    <div class="comparison-modal__panel" data-comparison-panel="roll" hidden>
+      <div class="comparison-modal__table-wrap">
+        <table class="comparison-modal__table comparison-modal__table--compact">
+          <thead>
+            <tr>
+              <th scope="col">Технические характеристики</th>
+              <th scope="col">Рулон/Упаковка</th>
+              <th scope="col">Теплопроводность λ10</th>
+              <th scope="col">Теплопроводность λ25</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">12м*1,2м*100мм*10кг/м³</th><td>1</td><td>0,04</td><td>0,044</td></tr>
+            <tr><th scope="row">10м*1,2м*100мм*15кг/м³</th><td>1</td><td>0,038</td><td>0,039</td></tr>
+            <tr><th scope="row">8м*1,2м*100мм*20кг/м³</th><td>1</td><td>0,034</td><td>0,036</td></tr>
+            <tr><th scope="row">7м*1,2м*100мм*25кг/м³</th><td>1</td><td>0,032</td><td>0,035</td></tr>
+            <tr><th scope="row">6м*1,2м*100мм*30кг/м³</th><td>1</td><td>0,032</td><td>0,034</td></tr>
+            <tr><th scope="row">5м*1,2м*100мм*35кг/м³</th><td>1</td><td>0,03</td><td>0,032</td></tr>
+            <tr><th scope="row">5м*1,2м*100мм*20кг/м³</th><td>1</td><td>0,034</td><td>0,036</td></tr>
+            <tr><th scope="row">5м*1,2м*100мм*25кг/м³</th><td>1</td><td>0,032</td><td>0,035</td></tr>
+            <tr><th scope="row">5м*1,2м*100мм*30кг/м³</th><td>1</td><td>0,032</td><td>0,034</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="comparison-modal__panel active" data-comparison-panel="plate">
+      <div class="comparison-modal__table-wrap">
+        <table class="comparison-modal__table comparison-modal__table--compact">
+          <thead>
+            <tr>
+              <th scope="col">Технические характеристики</th>
+              <th scope="col">Рулон/Упаковка</th>
+              <th scope="col">Теплопроводность λ10</th>
+              <th scope="col">Теплопроводность λ25</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">0,6м*1,2м*100мм*20кг/м³</th><td>12</td><td>0,034</td><td>0,036</td></tr>
+            <tr><th scope="row">0,6м*1,2м*100мм*25кг/м³</th><td>12</td><td>0,032</td><td>0,034</td></tr>
+            <tr><th scope="row">0,6м*1,2м*100мм*30кг/м³</th><td>12</td><td>0,032</td><td>0,034</td></tr>
+            <tr><th scope="row">0,6м*1,2м*100мм*35кг/м³</th><td>12</td><td>0,030</td><td>0,032</td></tr>
+            <tr><th scope="row">0,6м*1,2м*100мм*50кг/м³</th><td>3</td><td>0,030</td><td>0,032</td></tr>
+            <tr><th scope="row">0,6м*1,2м*100мм*60кг/м³</th><td>3</td><td>0,031</td><td>0,032</td></tr>
+            <tr><th scope="row">0,6м*1,2м*100мм*70кг/м³</th><td>3</td><td>0,031</td><td>0,032</td></tr>
+            <tr>
+              <th scope="row">1,16м*590мм*100мм*10кг/м³</th>
+              <td>20 плит в упаковке, 5 упак./мешок</td><td>0,038</td><td>0,044</td>
+            </tr>
+            <tr>
+              <th scope="row">1,16м*590мм*100мм*15кг/м³</th>
+              <td>16 плит в упаковке, 5 упак./мешок</td><td>0,036</td><td>0,039</td>
+            </tr>
+            <tr>
+              <th scope="row">1,16м*590мм*100мм*20кг/м³</th>
+              <td>14 плит в упаковке, 5 упак./мешок</td><td>0,034</td><td>0,036</td>
+            </tr>
+            <tr>
+              <th scope="row">1,16м*590мм*100мм*25кг/м³</th>
+              <td>10 плит в упаковке, 5 упак./мешок</td><td>0,032</td><td>0,035</td>
+            </tr>
+            <tr>
+              <th scope="row">1,16м*590мм*100мм*30кг/м³</th>
+              <td>8 плит в упаковке, 5 упак./мешок</td><td>0,032</td><td>0,034</td>
+            </tr>
+            <tr>
+              <th scope="row">1,16м*590мм*100мм*35кг/м³</th>
+              <td>7 плит в упаковке, 5 упак./мешок</td><td>0,030</td><td>0,032</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal comparison-modal"
+  data-comparison-id="ekovarmo"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="comparison-ekovarmo-title"
+>
+  <div class="comparison-modal__body comparison-modal__body--auto">
+    <div class="comparison-modal__header">
+      <h2 class="comparison-modal__title" id="comparison-ekovarmo-title">
+        Сравнительная таблица плита ЭкоВармо
+      </h2>
+      <button
+        type="button"
+        class="btn-reset comparison-modal__close"
+        aria-label="Закрыть сравнительную таблицу"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M2 2L18 18M18 2L2 18" fill="none" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="comparison-modal__table-wrap">
+      <table class="comparison-modal__table comparison-modal__table--compact">
+        <thead>
+          <tr>
+            <th scope="col">Технические характеристики</th>
+            <th scope="col">Рулон/Упаковка</th>
+            <th scope="col">Теплопроводность λ10</th>
+            <th scope="col">Теплопроводность λ25</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1,16м*590мм*100мм*10кг/м³</th>
+            <td>20 плит в упаковке, 5 упак./мешок</td><td>0,038</td><td>0,044</td>
+          </tr>
+          <tr>
+            <th scope="row">1,16м*590мм*100мм*15кг/м³</th>
+            <td>16 плит в упаковке, 5 упак./мешок</td><td>0,036</td><td>0,039</td>
+          </tr>
+          <tr>
+            <th scope="row">1,16м*590мм*100мм*20кг/м³</th>
+            <td>14 плит в упаковке, 5 упак./мешок</td><td>0,034</td><td>0,036</td>
+          </tr>
+          <tr>
+            <th scope="row">1,16м*590мм*100мм*25кг/м³</th>
+            <td>10 плит в упаковке, 5 упак./мешок</td><td>0,032</td><td>0,035</td>
+          </tr>
+          <tr>
+            <th scope="row">1,16м*590мм*100мм*30кг/м³</th>
+            <td>8 плит в упаковке, 5 упак./мешок</td><td>0,032</td><td>0,034</td>
+          </tr>
+          <tr>
+            <th scope="row">1,16м*590мм*100мм*35кг/м³</th>
+            <td>7 плит в упаковке, 5 упак./мешок</td><td>0,030</td><td>0,032</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+
 </html>

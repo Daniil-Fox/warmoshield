@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-  @include('partials/head.html')
+@include('partials/head.html')
 
-  <body class="page__body">
-    <div class="site-container">
-      @include('partials/header.html')
-      <main class="main">
-        @include('partials/hero.html') @include('partials/use.html')
-        @include('partials/partners.html') @include('partials/obj.html')
-        @include('partials/products.html')
-      </main>
-      @include('partials/footer.html')
-    </div>
-  </body>
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html') @include('partials/catalog.html')
+      @include('partials/use.html')
+
+      @include('partials/partners.html') @include('partials/obj.html')
+      @include('partials/projects.html')
+      @include('partials/products.html')
+      @include('partials/certificates.html')
+      @include('partials/blog.html')
+      @include('partials/factories.html')
+    </main>
+    @include('partials/footer.html')
+    @include('partials/catalog-modals.html')
+    @include('partials/project-modals.html')
+    @include('partials/comparison-modals.html')
+  </div>
+</body>
+
 </html>

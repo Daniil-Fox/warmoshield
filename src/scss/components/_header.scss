@@ -1,5 +1,14 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+
+  &--hidden {
+    transform: translateY(-100%);
+  }
+
   @include mobile {
     clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
   }
@@ -43,6 +52,11 @@
     line-height: 100%;
     letter-spacing: 0.02em;
     color: #000;
+    transition: color 0.2s ease-in-out;
+
+    @include hover {
+      color: #0b548e;
+    }
 
     @include mobile {
       display: none;

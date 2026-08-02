@@ -41,19 +41,31 @@ img {
 a {
   text-decoration: none;
 }
+
+section {
+  padding: 10rem 0;
+
+  @include mobile {
+    padding: 4.3rem 0;
+  }
+}
+
 .site-container {
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  overflow: clip;
   background: rgba(0, 0, 0, 0.03);
 }
 .main {
-  padding: 10rem 0;
   flex: 1;
 
-  @include mobile {
-    padding: 7rem 0;
+  > section:last-child {
+    padding-bottom: 10rem;
+
+    @include mobile {
+      padding-bottom: 8.6rem;
+    }
   }
 }
 .is-hidden {
@@ -172,6 +184,8 @@ a {
     }
 
     @include hover {
+      background-color: #000;
+
       span {
         background-color: #000;
         color: #fff;
@@ -191,6 +205,14 @@ a {
         background-color: #236599;
         color: #fff;
       }
+    }
+  }
+
+  &--black {
+    background: #000;
+
+    span {
+      background-color: #000;
     }
   }
 }
